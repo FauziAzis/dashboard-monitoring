@@ -1,7 +1,8 @@
 package me.fauzi.controller;
 
-import me.fauzi.model.ServiceModel;
-import me.fauzi.service.ServiceImpl;
+import me.fauzi.model.ServiceGroupModel;
+import me.fauzi.repository.ServiceGroupRepository;
+import me.fauzi.service.ServiceGroupImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,14 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/services")
-public class ServiceController {
+@RequestMapping("/services/group")
+public class ServiceGroupController {
     @Autowired
-    ServiceImpl serviceImpl;
+    ServiceGroupImpl serviceGroupImpl;
 
     @GetMapping("/")
-    public Page<ServiceModel> list(Pageable page){
-        return serviceImpl.listAll(page);
-    }
+    public Page<ServiceGroupModel> list(Pageable page){
+        return serviceGroupImpl.listAll(page);
 
+    }
 }

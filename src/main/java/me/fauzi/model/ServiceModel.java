@@ -20,8 +20,8 @@ public class ServiceModel {
     @Column(name = "SERVICE_ID")
     private String serviceId;
 
-    @Column(name = "SERVICE_NAME")
     @NotNull
+    @Column(name = "SERVICE_NAME")
     private String serviceName;
 
     @NotNull

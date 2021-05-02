@@ -20,7 +20,7 @@ public class ServiceImpl {
     @Autowired
     private ServiceRepository serviceRepository;
 
-    public Page<ServiceModel> listAllService(Pageable page){
+    public Page<ServiceModel> listAll(Pageable page){
         return serviceRepository.findAll(page);
     }
 
