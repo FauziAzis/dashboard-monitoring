@@ -14,8 +14,7 @@ import javax.validation.constraints.NotNull;
 @Table(name="SERVICE_T")
 public class ServiceModel {
 
-    @Id @NotNull
-    @GeneratedValue(generator = "UUID")
+    @Id @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(name = "SERVICE_ID")
     private String serviceId;
@@ -32,9 +31,21 @@ public class ServiceModel {
     @Column(name = "SERVICE_ENDPOINT")
     private String serviceEndpoint;
 
-    @ManyToOne @NotNull
+    @OneToOne @NotNull
     @JoinColumn(name = "SERVICE_GROUP_ID")
-    private ServiceGroupModel groupId;
+    public ServiceGroupModel groupId;
+
+    public ServiceModel(){
+
+    }
+
+    public ServiceModel(String serviceId, String serviceName, String serviceType, String serviceEndpoint, ServiceGroupModel groupId) {
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+        this.serviceType = serviceType;
+        this.serviceEndpoint = serviceEndpoint;
+        this.groupId = groupId;
+    }
 
 
     //Getter Setter

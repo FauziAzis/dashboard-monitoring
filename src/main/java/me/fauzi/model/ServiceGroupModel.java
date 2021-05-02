@@ -13,8 +13,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "SERVICE_GROUP_T")
 public class ServiceGroupModel {
 
-    @Id @NotNull
-    @GeneratedValue(generator = "UUID")
+    @Id @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(name = "SERVICE_GROUP_ID")
     private String serviceGroupId;
@@ -26,6 +25,16 @@ public class ServiceGroupModel {
     @NotNull
     @Column(name = "SERVICE_GROUP_CATEGORY")
     private String serviceGroupCategory;
+
+    public ServiceGroupModel(){
+
+    }
+
+    public ServiceGroupModel(String serviceGroupId, String serviceGroupName,  String serviceGroupCategory) {
+        this.serviceGroupId = serviceGroupId;
+        this.serviceGroupName = serviceGroupName;
+        this.serviceGroupCategory = serviceGroupCategory;
+    }
 
     //Getter Setter
 

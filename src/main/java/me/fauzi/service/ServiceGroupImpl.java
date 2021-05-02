@@ -24,7 +24,7 @@ public class ServiceGroupImpl {
         return serviceGroupRepository.findAll(page);
     }
 
-    private void saveServiceGroup(ServiceGroupModel serviceGroup){
+    public void saveGroup(ServiceGroupModel serviceGroup){
         serviceGroupRepository.save(serviceGroup);
     }
 
