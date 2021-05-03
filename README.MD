@@ -44,7 +44,7 @@ spring.jpa.generate-ddl=true
     	"serviceType": "Web Service",
     	"serviceEndpoint": "hhtp",
     	"groupId": {
-    		"serviceGroupId": "XXX",
+    		"serviceGroupId": "[copy dari group id]"
     	}
     }
     ```
@@ -55,6 +55,15 @@ spring.jpa.generate-ddl=true
     	"serviceGroupCategory" : "SISTEM PEMBAYARAN"
     }
     
+    ```
+    * Job Head
+    ```
+    {
+        "jobHeadName": "JOB JAM 10",
+        "jobHeadStart": "2021-05-02T21:19:05",
+        "jobHeadFinish": "2021-05-02T21:19:05",
+        "jobHeadStatus": 100
+    }
     ```
 
     
