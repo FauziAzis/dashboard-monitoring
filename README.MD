@@ -65,5 +65,18 @@ spring.jpa.generate-ddl=true
         "jobHeadStatus": 100
     }
     ```
+    * Job Det
+    ```
+    {
+          "jobDetStatus": 1,
+          "jobDetResponse": "RESPONSE 200:OK",
+          "jobDetTime": "2021-05-02T21:19:05",
+          "jobHeadId": {
+              "jobHeadId": "943bb702-473e-4692-a0c2-ff9537626168"
+          },"serviceId": {
+              "serviceGroupId": "e413175d-e973-488d-90a0-8235304a7fa5"
+          }
+      }
+    ```
 
     
