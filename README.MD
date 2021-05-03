@@ -74,7 +74,7 @@ spring.jpa.generate-ddl=true
           "jobHeadId": {
               "jobHeadId": "943bb702-473e-4692-a0c2-ff9537626168"
           },"serviceId": {
-              "serviceGroupId": "e413175d-e973-488d-90a0-8235304a7fa5"
+              "serviceId": "e413175d-e973-488d-90a0-8235304a7fa5"
           }
       }
     ```
